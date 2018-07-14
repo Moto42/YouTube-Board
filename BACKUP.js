@@ -1,38 +1,46 @@
-console.log("testing");
 
-const cardElements = document.querySelectorAll('.card');
 
-const cards = cardElements.forEach(cardsFromHTML);
+const sounbBoard = document.querySelector('#soundBoard');
 
+const cardDeck = [];
+
+intializeSoundboard();
 
 
 class Card {
 
-	constructor(videoID,thumb=1){
+	constructor(videoID,thumb=1) {
+
+		this.element = document.createElement('div');
+
+		this.element.classList.add('card',);
 		
 		this.videoID = videoID;
-		
-		this.thumb = thumb;
 
-		this.soundButton = new SoundButton(this.videoID, this.thumb);
+		this.soundButton = new SoundButton(this.videoID, thumb);
+
+		this.element.appendChild(this.soundButton.img);
 
 	}
 }
 
-class SoundButton{
+
+class SoundButton {
 
 	constructor(videoID,thumb=1){
-		
-		this.videoURL=this.getVideoURL(videoID);
 
-		this.thumb = this.getThumbnail(videoID, thumb);
+		this.videoURL = `https://www.youtube.com/embed/${videoID}&autoplay=1&controls=0`;
 
-		this.img = document.createElement("img");
+		this.thumbURL = this.getThumbnail(videoID, thumb);
 
-		this.img.src =this.thumb;
+		this.img = document.createElement('img');
 
-		this.img.addEventListener("click", this.play)
+		this.img.src = this.thumbURL;
+
+		this.play();
+
 	}
+
 
 	getThumbnail(videoID, thumbNum) {
 
@@ -42,57 +50,28 @@ class SoundButton{
 		return `https://img.youtube.com/vi/${videoID}/${thumbNum}.jpg`;
 	}
 
-	getVideoURL(videoID){
 
-		return `https://www.youtube.com/embed/${videoID}&autoplay=1&controls=0`;
-	}
-
-
-	play(event) {
+	play() {
 
 		console.log(this.videoURL);
 	}
 }
 
 
-function cardsFromHTML(card){
-	const cardString = card.textContent;
-	// const videoID = parseCardStringVID(cardString);
-	// const thumb = parseCardStringThumb(cardString);
-	return new Card(videoID,thumb); 
+function intializeSoundboard() {
 
-}
+	const cardElements = document.querySelectorAll('.defaultCard');
 
-function parseCardStringVID(cardString){
+	cardElements.forEach(cardFromString);
 
-}
-
-function parseCardStringThumb(cardString) {
-
+	let a = new Card('xczDd2_X0DI',1);
+	sounbBoard.appendChild(a);
 }
 
 
+function cardFromString(defaultCard,i) {
+	
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function thinger(e){console.log(e);};
