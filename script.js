@@ -1,9 +1,9 @@
 
 
-const sounbBoard = document.querySelector('#soundBoard');
+const soundBoard = document.querySelector('#soundBoard');
+
 
 const cardDeck = [];
-
 
 
 class Card {
@@ -21,8 +21,6 @@ class Card {
 		this.element.appendChild(this.soundButton.img);
 
 	}
-
-
 }
 
 
@@ -60,7 +58,7 @@ class SoundButton {
 
 		this.img.src = this.thumbURL;
 
-		this.img.addEventListener('click', function(){ that.play(that.videoURL)} );
+		this.img.addEventListener('click', function(){ that.play()} );
 	}
 
 
@@ -73,8 +71,12 @@ class SoundButton {
 	}
 
 
-	play(e) {
-		console.log(e);
+	play() {
+		// psuedocode:::
+		// open a new window;
+		// point that window to this.videoURL;
+		// wait for the video to stop playing;
+		// close teh window.
 	}
 }
 
