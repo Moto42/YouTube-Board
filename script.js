@@ -1,35 +1,67 @@
-const cardElements = document.querySelectorAll('.card');
-cardElements.forEach(populateHTMLCards);
+
+
+const sounbBoard = document.querySelector('#soundBoard');
+
+const cardDeck = [];
+
+
 
 class Card {
 
-	constructor(videoID,thumb=1){
+	constructor(videoID,thumb=1) {
 
-		this.videoID = videoID;
+		this.element = document.createElement('div');
+
+		this.element.classList.add('card',);
 		
-		this.thumb = thumb;
+		this.videoID = videoID;
 
-		this.soundButton = new SoundButton(this.videoID, this.thumb);
+		this.soundButton = new SoundButton(this.videoID, thumb);
+
+		this.element.appendChild(this.soundButton.img);
 
 	}
 
-	appendTo(node){
-		node.appendChild(this.soundButton.img);
+
+}
+
+
+
+function parseIDFromString(cardString) {
+	if(cardString.includes("&")) {
+		return cardString.slice(0,cardString.indexOf('&'));
+	}
+	else {
+		return cardString;
 	}
 }
 
-class SoundButton{
+function parseThumbNumFromString(cardString) {
+	if(cardString.includes("&")) {
+		return cardString.slice(-1);
+	}
+	else {
+		return 1;
+	}
+}
+
+
+class SoundButton {
 
 	constructor(videoID,thumb=1){
 
-		this.img = document.createElement("img");
+		this.videoURL = `https://www.youtube.com/embed/${videoID}&autoplay=1&controls=0`;
 
-		this.img.src =this.getThumbnail(videoID,thumb);
+		this.thumbURL = this.getThumbnail(videoID, thumb);
 
-		this.img.addEventListener("click", this.play);
+		this.img = document.createElement('img');
 
-		this.img.videoURL= this.getVideoURL(videoID);
+		this.img.src = this.thumbURL;
+
+		this.img.addEventListener('click', function(){this.play(this);} );
+
 	}
+
 
 	getThumbnail(videoID, thumbNum) {
 
@@ -39,52 +71,33 @@ class SoundButton{
 		return `https://img.youtube.com/vi/${videoID}/${thumbNum}.jpg`;
 	}
 
-	getVideoURL(videoID){
 
-		return `https://www.youtube.com/embed/${videoID}&autoplay=1&controls=0`;
-	}
+	play(e) {
 
-
-	play(videoURL) {
-		console.log(this.videoURL);
-		return true;
+		console.log(e);
 	}
 }
 
 
-function populateHTMLCards(card){
-	const cardString = card.innerText;
-	console.log(cardString);
-	const filledCard = new cardFromString(cardString);
-	filledCard.appendTo(card);
+
+function intializeSoundboard() {
+
+	let defaultCards = document.querySelectorAll('.defaultCard');
+
+	defaultCards.forEach(cardFromString);
 }
 
-function cardFromString (cardString) {
-	let videoID = parseCardStringID(cardString);
-	let thumbNum = parseCardStringThumbNum(cardString);
-	return new  Card(videoID,thumbNum);
+
+function cardFromString(defaultCard,i) {
+	let videoID = parseIDFromString(defaultCard.textContent);
+
+	let thumbNum= parseThumbNumFromString(defaultCard.textContent);
+
+	cardDeck.push( new Card(videoID, thumbNum));
+
+	soundBoard.appendChild(cardDeck[i].element);
 }
 
-function parseCardStringID(cardString){
-	if(cardString.includes("&")){
-		return cardString.slice(0,cardString.indexOf("&"));
-	}
-	else {
-		return cardString;
-	}
-}
 
-function parseCardStringThumbNum(cardString){
-	if(cardString.includes("&")){
-		return cardString.slice(-1);
-	}
-	else {
-		return 1;
-	}
-}
-
-// THIS WORKS!!!
-// const a = new cardFromString("xczDd2_X0DI&3");
-// a.appendTo(cardElements[0]);
-
-
+intializeSoundboard();
+console.log(cardDeck);

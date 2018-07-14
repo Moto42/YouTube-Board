@@ -30,6 +30,10 @@ body{
 }
 
 
+.defaultCard {
+	/*display: none;*/
+}
+
 .card> img {
 
 		border-radius: 50% 50% 50% 50%;
