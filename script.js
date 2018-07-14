@@ -50,6 +50,8 @@ class SoundButton {
 
 	constructor(videoID,thumb=1){
 
+		let that = this;
+
 		this.videoURL = `https://www.youtube.com/embed/${videoID}&autoplay=1&controls=0`;
 
 		this.thumbURL = this.getThumbnail(videoID, thumb);
@@ -58,8 +60,7 @@ class SoundButton {
 
 		this.img.src = this.thumbURL;
 
-		this.img.addEventListener('click', function(){this.play(this);} );
-
+		this.img.addEventListener('click', function(){ that.play(that.videoURL)} );
 	}
 
 
@@ -73,7 +74,6 @@ class SoundButton {
 
 
 	play(e) {
-
 		console.log(e);
 	}
 }
@@ -96,8 +96,9 @@ function cardFromString(defaultCard,i) {
 	cardDeck.push( new Card(videoID, thumbNum));
 
 	soundBoard.appendChild(cardDeck[i].element);
+
+	defaultCard.remove();
 }
 
 
 intializeSoundboard();
-console.log(cardDeck);
