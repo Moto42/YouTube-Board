@@ -2,8 +2,11 @@
 
 const soundBoard = document.querySelector('#soundBoard');
 
-
 const cardDeck = [];
+
+let buttonsActive = false; 
+
+const playerFrame = document.querySelector('#playerFrame');
 
 
 class Card {
@@ -34,6 +37,7 @@ function parseIDFromString(cardString) {
 	}
 }
 
+
 function parseThumbNumFromString(cardString) {
 	if(cardString.includes("&")) {
 		return cardString.slice(-1);
@@ -44,13 +48,49 @@ function parseThumbNumFromString(cardString) {
 }
 
 
+var player;
+
+function onYouTubeIframeAPIReady(){
+	buttonsActive = true;
+	player = new YT.Player('playerFrame', {
+		events:{
+			'onReady' : onPlayerReady,
+			'onStateChange' : onPlayerStateChange,
+		}
+	});
+
+}
+
+function onPlayerReady(){
+	return "Plyaer ready";
+}
+
+function onPlayerStateChange(event){
+	switch (event.data){
+
+		case -1:
+			buttonsActive = false;
+			player.getIframe().classList.remove('hidden');
+			break;
+
+		case 0:
+			buttonsActive = true;
+			player.getIframe().classList.add('hidden');
+			break;
+	}
+
+}
+
+
 class SoundButton {
 
 	constructor(videoID,thumb=1){
 
 		let that = this;
 
-		this.videoURL = `https://www.youtube.com/embed/${videoID}&autoplay=1&controls=0`;
+		this.videoID = videoID;
+
+		this.videoURL = `https://www.youtube.com/embed/${videoID}?autoplay=1&controls=0`;
 
 		this.thumbURL = this.getThumbnail(videoID, thumb);
 
@@ -72,11 +112,8 @@ class SoundButton {
 
 
 	play() {
-		// psuedocode:::
-		// open a new window;
-		// point that window to this.videoURL;
-		// wait for the video to stop playing;
-		// close teh window.
+		if (buttonsActive === false){return false;}
+		player.loadVideoById(this.videoID); // point that window to this.videoURL;
 	}
 }
 
@@ -104,3 +141,4 @@ function cardFromString(defaultCard,i) {
 
 
 intializeSoundboard();
+

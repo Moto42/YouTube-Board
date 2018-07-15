@@ -17,6 +17,17 @@ body{
 
 }
 
+.player{}
+
+
+.hidden{
+
+	display: none;
+}
+
+
+#playerFrame{}
+
 
 .soundBoard {
 
