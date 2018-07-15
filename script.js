@@ -66,6 +66,7 @@ function onPlayerReady(){
 }
 
 function onPlayerStateChange(event){
+
 	switch (event.data){
 
 		case -1:
@@ -77,6 +78,17 @@ function onPlayerStateChange(event){
 			buttonsActive = true;
 			player.getIframe().classList.add('hidden');
 			break;
+
+		case 1:
+			break;
+
+		case 3:
+			break;
+
+		default:
+			console.log(event.data);
+			buttonsActive = true;
+			player.getIframe().classList.add('hidden');
 	}
 
 }

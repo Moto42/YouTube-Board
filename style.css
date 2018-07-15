@@ -17,8 +17,6 @@ body{
 
 }
 
-.player{}
-
 
 .hidden{
 
@@ -26,18 +24,31 @@ body{
 }
 
 
-#playerFrame{}
+#playerFrame{
+	
+	z-index: 5;
+
+	position: fixed;
+
+	width: 100%;
+
+}
 
 
-.soundBoard {
+#soundBoard {
 
+	display: flex;
 
+	flex-wrap: wrap;
+
+	justify-content: space-between;
 }
 
 
 .card {
 
-
+	min-width: 150px;
+	min-height: 150px;
 }
 
 
@@ -46,6 +57,28 @@ body{
 }
 
 .card> img {
+	
+	min-width: 150px;
+	
+	border-radius: 50% 50% 50% 50%;
+	}
 
-		border-radius: 50% 50% 50% 50%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
