@@ -1,0 +1,18 @@
+FINAL FUNCTIONALITY
+
+remove card button
+addNewCard button
+thumnailPicker
+
+
+SAVING FILES
+
+save custom cards in cookies
+
+
+BEUTIFICATION PASS
+
+
+ANALYTICS
+
+add google analytics.
