@@ -23,7 +23,7 @@ class VideoButton extends Component {
 
   render(){
     return (
-      <div class="videoButton" onClick={this.playVideo}>
+      <div className="videoButton" onClick={this.playVideo}>
         <img src={this.state.thumbNailUrl} />
       </div>
     )
