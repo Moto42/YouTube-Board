@@ -1,0 +1,7 @@
+
+.videoButton {
+  border-radius: 50%;
+  overflow: hidden;
+  border-style: solid;
+  width: min-content;
+}
