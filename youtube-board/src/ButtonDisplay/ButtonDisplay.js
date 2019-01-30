@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoButton from '../VideoButton';
+import './ButtonDisplay.css';
 
 function videoMapper(video, playVideo) {
   const callback  = typeof playVideo       === "function"? playVideo       : function(nuthin){return};
@@ -14,7 +15,7 @@ function ButtonDisplay(props){
   const videos = Array.isArray(props.videos) ? props.videos : []
   const videoButtons = videos.map( video => videoMapper(video,props.playVideo) );
   return (
-    <div>
+    <div class="buttonDisplay">
       {props.children}
       {videoButtons}
     </ div>
