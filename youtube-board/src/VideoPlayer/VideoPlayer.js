@@ -29,6 +29,7 @@ class VideoPlayer extends Component {
           }}
           onPause = {this.hidePlayer}
           onEnd   = {this.hidePlayer}
+          onError = {this.hidePlayer}
         />
       </div>
     )
