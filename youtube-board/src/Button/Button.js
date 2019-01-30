@@ -8,8 +8,12 @@ function Button(props){
   const action     =  typeof props.action === "function" ? props.action : nullFunc ;
   const className  =  typeof props.class  === "string"   ? `button ${props.class}`  : "" ;
 
+  const buttonStyle = {
+    cursor : 'pointer',
+  }
+
   return (
-    <div className={className} onClick={action}>
+    <div className={className} onClick={action} style={buttonStyle}>
       {props.children}
     </div>
   );
