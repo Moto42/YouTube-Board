@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './VideoButton.css';
 
 
+//Youtube thumnail API endpoint
 // https://img.youtube.com/vi/<insert-youtube-video-id-here>/#.jpg
 // # is 0 for full size image, or 1,2,3 for the thumbnails
 
