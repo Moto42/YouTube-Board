@@ -247,5 +247,13 @@ export default [
   {
     videoID: "nHc288IPFzk",
     thumbnail : 3
+  },
+  {
+    videoID: "MhNrsUiL6bY",
+    thumbnail : 1
+  },
+  {
+    videoID: "Vo1u3IIOmX4",
+    thumbnail : 1
   }
 ]
