@@ -1,16 +1,12 @@
 
 export default [
   {
-    vidoeID:"X9rEh7hzPcI",
-    thumbnail:1
-  },
-  {
     videoID: "ddVorPcvuAs",
-    thumbnail: 1
+    thumbnail: 3
   },
   {
     videoID: "Hc-YvZEaclM",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "juQyy00x-Mw",
@@ -18,7 +14,7 @@ export default [
   },
   {
     videoID: "7GwGu8QVpLU",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "5N9KyCfBbEQ",
@@ -26,15 +22,15 @@ export default [
   },
   {
     videoID: "flxGwx7zKV4",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "UqiGMsMUiGI",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "GhLcBrwc3-8",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "1AT_HKV70o4",
@@ -46,19 +42,19 @@ export default [
   },
   {
     videoID: "6zP-r6Hoyao",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "2ft954vXPa4",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "wxH0zCLYJm0",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "3E9eUFBlidM",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "rYmXm6nziZs",
@@ -66,7 +62,7 @@ export default [
   },
   {
     videoID: "vp0d18LT3os",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "m8aaoC2hrlc",
@@ -78,11 +74,11 @@ export default [
   },
   {
     videoID: "tupRRoofJAo",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "bMPb-4sPzG0",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "dAXa3wTZjes",
@@ -90,11 +86,11 @@ export default [
   },
   {
     videoID: "aIrkI43NIIU",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "oXluQI9GQXk",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "Ax8s5HFdSqU",
@@ -102,7 +98,7 @@ export default [
   },
   {
     videoID: "HluANRwPyNo",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "UfBV9ivzavw",
@@ -110,19 +106,19 @@ export default [
   },
   {
     videoID: "UjTv8ivh7mY",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "kGI1M3ndiIk",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "FlEN-IHOJB0",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "-KvZRc3cJK0",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "d7TLnfcl6qE",
@@ -130,19 +126,19 @@ export default [
   },
   {
     videoID: "GN9cENdM27I",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "q0ctkSwhzCg",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "G0xoqYlpLBg",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "SxTNhD5jTyQ",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "qwqP95Am2mA",
@@ -150,11 +146,11 @@ export default [
   },
   {
     videoID: "HhObZdMZ5EU",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "1KIKrSG-Xzc",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "fsF7enQY8uI",
@@ -162,11 +158,11 @@ export default [
   },
   {
     videoID: "uZoHVnUszn0",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "rdOXjJjYE8g",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "z4fznINyU-U",
@@ -186,11 +182,11 @@ export default [
   },
   {
     videoID: "V_csiizWoig",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "lqj-QNYsZFk",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "zBJU9ndpH1Q",
@@ -202,19 +198,15 @@ export default [
   },
   {
     videoID: "kD-Bg-lKF_c",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "uhY9Zxv1-oo",
-    thumbnail : 1
-  },
-  {
-    videoID: "",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "oZzgAjjuqZM",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "YWdD206eSv0",
@@ -222,7 +214,7 @@ export default [
   },
   {
     videoID: "ihpG_NJ_T1g",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "h46ry-hpM3o",
@@ -230,19 +222,19 @@ export default [
   },
   {
     videoID: "cNLwA-ak5nI",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "VTO5yiN1b-I",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "tBQGHgIp7wc",
-    thumbnail : 1
+    thumbnail : 2
   },
   {
     videoID: "diOhwvRYlsU",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "KDDN40hHXCQ",
@@ -250,10 +242,10 @@ export default [
   },
   {
     videoID: "Fc1P-AEaEp8",
-    thumbnail : 1
+    thumbnail : 3
   },
   {
     videoID: "nHc288IPFzk",
-    thumbnail : 1
+    thumbnail : 3
   }
 ]
