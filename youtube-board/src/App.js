@@ -11,13 +11,27 @@ import AddButtonModal from './AddButtonModal'
 
 import img_addbuton  from './images/addButton.jpg';
 
+function isJson(str){
+  try {
+    JSON.parse(str);
+  } catch(e) {
+    return false;
+  }
+  return true;
+}
+
 //returns an array of video objects
 // { videoID: STRING, thumbnail: NUMBER 1-3 }
 function getVideoList(){
-  const localVersion = JSON.parse(window.localStorage.videoList);
-  const localValid = ( Array.isArray(localVersion) && !!localVersion[0].videoID );
-  const dalist = localValid ? localVersion : require("./data/videoList");
-  return dalist;
+  const localString = window.localStorage.videoList;
+  if(isJson(localString)){
+    const localVersion = JSON.parse(window.localStorage.videoList);
+    const localValid = ( Array.isArray(localVersion) && !!localVersion[0].videoID );
+    if(localValid) return localVersion;
+  }
+  const defaultList = require("./data/videoList");
+  console.log(defaultList);
+  return defaultList.default;
 }
 
 class App extends Component {
