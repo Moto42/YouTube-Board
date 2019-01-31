@@ -6,7 +6,7 @@ function nullFunc() {return};
 
 function Button(props){
   const action     =  typeof props.action === "function" ? props.action : nullFunc ;
-  const className  =  typeof props.class  === "string"   ? `button ${props.class}`  : "" ;
+  const className  =  typeof props.className  === "string"   ? `button ${props.className}`  : "" ;
 
   const buttonStyle = {
     cursor : 'pointer',
