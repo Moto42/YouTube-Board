@@ -109,7 +109,7 @@ class App extends Component {
           hideAddbuttonModal = {this.hideAddbuttonModal}
         />
         <ButtonDisplay videos={this.state.videoList} playVideo={this.playVideo} removeButton={this.removeButton}>
-          <Button action={this.showAddbuttonModal} class='videoButton'>
+          <Button action={this.showAddbuttonModal} className='videoButton'>
             <img src={img_addbuton} />
           </Button>
         </ButtonDisplay>
