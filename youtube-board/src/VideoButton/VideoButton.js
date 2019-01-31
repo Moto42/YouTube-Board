@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+import Button from '../Button';
 import './VideoButton.css';
-
 
 //Youtube thumnail API endpoint
 // https://img.youtube.com/vi/<insert-youtube-video-id-here>/#.jpg
@@ -16,16 +16,24 @@ class VideoButton extends Component {
       thumbNailUrl : `https://img.youtube.com/vi/${props.videoID}/${thumbnailNumber}.jpg`
     };
     this.playVideo = this.playVideo.bind(this);
+    this.removeButton = this.removeButton.bind(this);
   };
 
   playVideo() {
     this.props.playVideo(this.state.videoID);
   };
 
+  removeButton() {
+    this.props.removeButton(this.state.videoID);
+  }
+
   render(){
     return (
-      <div className="videoButton" onClick={this.playVideo}>
-        <img src={this.state.thumbNailUrl} />
+      <div className="vbuttonContainer">
+        <Button className="removeButton" action={this.removeButton}>
+          &#x2718;
+        </Button>
+        <img className="videoButton" src={this.state.thumbNailUrl} onClick={this.playVideo} />
       </div>
     )
   }

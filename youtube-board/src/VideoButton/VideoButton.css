@@ -1,5 +1,16 @@
+.vbuttonContainer{
+  position: relative;
+}
+
+.removeButton{
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 .videoButton {
+  cursor: pointer;
   border-radius: 50%;
   overflow: hidden;
   border-style: solid;

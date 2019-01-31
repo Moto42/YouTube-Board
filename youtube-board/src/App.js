@@ -50,6 +50,7 @@ class App extends Component {
     this.hideAddbuttonModal  = this.hideAddbuttonModal.bind(this);
     this.addButton           = this.addButton.bind(this);
     this.saveVideoList       = this.saveVideoList.bind(this);
+    this.removeButton        = this.removeButton.bind(this);
   }
 
   componentDidMount() {
@@ -91,11 +92,15 @@ class App extends Component {
   }
 
   removeButton(vid){
-    const list  = [...this.state.videoList];
-    const index = list.findIndex(e => e.videoID === vid);
-    const newList = list.slice(0,index).concat(list.slice(index+1));
-    this.setState({videoList : newList})
-    this.saveVideoList(newList);
+    // let   list  = [...this.state.videoList];
+    // const index = list.findIndex(e => e.videoID === vid);
+    // console.log(index)
+    // list.splice(index,1);
+    const list = this.state.videoList.filter(video => video.videoID !== vid);
+
+    // this.saveVideoList(newList);
+    this.setState({videoList:[]})
+    this.setState({videoList : list})
   }
 
   render() {
