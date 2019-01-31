@@ -255,5 +255,9 @@ export default [
   {
     videoID: "Vo1u3IIOmX4",
     thumbnail : 1
+  },
+  {
+    videoID: "e2ESP4MUcxg",
+    thumbnail : 3
   }
 ]

@@ -15,7 +15,7 @@ function ButtonDisplay(props){
   const videos = Array.isArray(props.videos) ? props.videos : []
   const videoButtons = videos.map( video => videoMapper(video,props.playVideo) );
   return (
-    <div class="buttonDisplay">
+    <div className="buttonDisplay">
       {props.children}
       {videoButtons}
     </ div>
