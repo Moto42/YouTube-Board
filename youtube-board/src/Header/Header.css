@@ -1,0 +1,49 @@
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+}
+
+.yt-icon  {
+  height: 75px;
+  transition: height .5s;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.logoText {
+  font-size: 3rem;
+  transition: font-size .5s;
+  margin: 0;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+@media (max-width: 760px) {
+
+  .yt-icon {
+    height: 45px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  .logoText {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .yt-icon {
+    height: 24px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+}
