@@ -1,4 +1,6 @@
 .vbuttonContainer{
+  width: 126px;
+  transition: width .5s;
   position: relative;
 }
 
@@ -14,5 +16,18 @@
   border-radius: 50%;
   overflow: hidden;
   border-style: solid;
-  width: min-content;
+  width: 126px;
+  max-width: 100%;
+}
+.videoButton > img {
+  max-width: 100%;
+}
+
+@media (max-width: 425px) {
+  .vbuttonContainer {
+    width: 100px;
+  }
+  .videoButton {
+    width: 100px;
+  }
 }
