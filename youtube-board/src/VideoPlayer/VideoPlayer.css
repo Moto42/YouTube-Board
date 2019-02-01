@@ -1,4 +1,8 @@
 
+#youtubePlayer {
+  max-width: 99vw;
+}
+
 .videoplayer {
   position: fixed;
   height: 100%;

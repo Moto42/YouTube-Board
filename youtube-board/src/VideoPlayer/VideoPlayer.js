@@ -18,6 +18,7 @@ class VideoPlayer extends Component {
         className={this.props.visible===true ? "videoplayer visible" : "videoplayer"}
       >
         <YouTube
+          id      = "youtubePlayer"
           videoId = {this.props.videoId}
           opts    = {{
             playerVars : {
