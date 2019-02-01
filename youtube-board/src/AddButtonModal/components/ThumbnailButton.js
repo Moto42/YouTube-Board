@@ -9,7 +9,7 @@ function ThumbnailButton(props) {
 
   return(
     <div className="videoButton" onClick={_handleClick}>
-      <img src={thumbNailUrl} />
+      <img alt="" src={thumbNailUrl} />
     </div>
   )
 }

@@ -33,7 +33,7 @@ class VideoButton extends Component {
         <Button className="removeButton" action={this.removeButton}>
           &#x2718;
         </Button>
-        <img className="videoButton" src={this.state.thumbNailUrl} onClick={this.playVideo} />
+        <img className="videoButton" src={this.state.thumbNailUrl} onClick={this.playVideo} alt="Play Video" />
       </div>
     )
   }
