@@ -4,7 +4,6 @@ import './App.css';
 import Header         from './Header';
 import Footer         from './Footer';
 import ButtonDisplay  from './ButtonDisplay';
-import VideoButton    from './VideoButton';
 import VideoPlayer    from './VideoPlayer';
 import Button         from './Button';
 import AddButtonModal from './AddButtonModal'
@@ -30,7 +29,6 @@ function getVideoList(){
     if(localValid) return localVersion;
   }
   const defaultList = require("./data/videoList");
-  console.log(defaultList);
   return defaultList.default;
 }
 
@@ -105,7 +103,6 @@ class App extends Component {
           visible={this.state.addbuttonModalVisible}
           hideAddbuttonModal={this.hideAddbuttonModal}
           addButton = {this.addButton}
-          hideAddbuttonModal = {this.hideAddbuttonModal}
         />
         <ButtonDisplay videos={this.state.videoList} playVideo={this.playVideo} removeButton={this.removeButton}>
           <Button action={this.showAddbuttonModal} className='videoButton'>
