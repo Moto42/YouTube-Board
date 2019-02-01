@@ -2,6 +2,7 @@
   width: 126px;
   transition: width .5s;
   position: relative;
+  margin: .25rem;
 }
 
 .removeButton{
@@ -25,9 +26,11 @@
 
 @media (max-width: 425px) {
   .vbuttonContainer {
+    margin: 0rem;
     width: 100px;
   }
   .videoButton {
     width: 100px;
+    max-width: 100%;
   }
 }
