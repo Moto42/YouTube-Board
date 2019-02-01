@@ -1,5 +1,6 @@
 {
   "name": "youtube-board",
+  "homepage": "https://moto42.github.io/Projects/youtube-board",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
