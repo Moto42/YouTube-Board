@@ -92,15 +92,9 @@ class App extends Component {
   }
 
   removeButton(vid){
-    // let   list  = [...this.state.videoList];
-    // const index = list.findIndex(e => e.videoID === vid);
-    // console.log(index)
-    // list.splice(index,1);
     const list = this.state.videoList.filter(video => video.videoID !== vid);
-
-    // this.saveVideoList(newList);
-    this.setState({videoList:[]})
-    this.setState({videoList : list})
+    this.saveVideoList(list);
+    this.setState({videoList : list});
   }
 
   render() {

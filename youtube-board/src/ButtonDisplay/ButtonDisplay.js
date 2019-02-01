@@ -8,7 +8,7 @@ function videoMapper(video, playVideo,removeButton) {
   const videoID       = typeof video.videoID   === "string"  ? video.videoID   : "x4Q108If5WU";
   const thumbnail     = typeof video.thumbnail === "number"  ? video.thumbnail : 1;
   return (
-    <VideoButton videoID={videoID} thumbnailNumber={thumbnail} playVideo={callback} removeButton={removeBtn} />
+    <VideoButton videoID={videoID} thumbnailNumber={thumbnail} playVideo={callback} removeButton={removeBtn} key={`${videoID}_${thumbnail}`}/>
   );
 };
 
