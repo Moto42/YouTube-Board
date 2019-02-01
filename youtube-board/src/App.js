@@ -52,6 +52,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    document.title = "YouTube SoundBoard";
     const videoList = getVideoList();
     this.setState({videoList:videoList})
   }
