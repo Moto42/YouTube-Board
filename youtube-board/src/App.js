@@ -100,11 +100,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <AddButtonModal
-          visible={this.state.addbuttonModalVisible}
-          hideAddbuttonModal={this.hideAddbuttonModal}
-          addButton = {this.addButton}
-        />
         <ButtonDisplay videos={this.state.videoList} playVideo={this.playVideo} removeButton={this.removeButton}>
           <Button action={this.showAddbuttonModal} className='videoButton'>
             <img src={img_addbuton} alt="Add A Button" />
@@ -114,6 +109,11 @@ class App extends Component {
           visible={this.state.playerVisible}
           videoId={this.state.currentVideo}
           hidePlayer={this.hidePlayer}
+        />
+        <AddButtonModal
+        visible={this.state.addbuttonModalVisible}
+        hideAddbuttonModal={this.hideAddbuttonModal}
+        addButton = {this.addButton}
         />
         <Footer />
       </div>
