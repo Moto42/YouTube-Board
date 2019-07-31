@@ -38,7 +38,11 @@
   left: 0;
   height: 100%;
   width: 100%;
-
+  background-color: rgba(100, 100, 100, 0.3);
+  transition: background-color .25s;
+}
+.videoButton > .buttonOverlay:hover {
+  background-color: rgba(100, 100, 100, 0.0);
 }
 
 @media (max-width: 425px) {
