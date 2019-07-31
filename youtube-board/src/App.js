@@ -8,7 +8,8 @@ import VideoPlayer    from './VideoPlayer';
 import Button         from './Button';
 import AddButtonModal from './AddButtonModal'
 
-import img_addbuton  from './images/addButton.jpg';
+import img_addbuton      from './images/addButton.jpg';
+import img_buttonOverlay from './VideoButton/overlay.png';
 
 function isJson(str){
   try {
@@ -102,7 +103,8 @@ class App extends Component {
         <Header />
         <ButtonDisplay videos={this.state.videoList} playVideo={this.playVideo} removeButton={this.removeButton}>
           <Button action={this.showAddbuttonModal} className='videoButton'>
-            <img src={img_addbuton} alt="Add A Button" />
+            <img className="videoImg" src={img_addbuton} alt="Add A Button" />
+            <img className="buttonOverlay" src={img_buttonOverlay} alt='Add A Button' />
           </Button>
         </ButtonDisplay>
         <VideoPlayer
