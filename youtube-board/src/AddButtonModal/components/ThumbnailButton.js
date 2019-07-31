@@ -10,8 +10,8 @@ function ThumbnailButton(props) {
 
   return(
     <div className="videoButton" onClick={_handleClick}>
-      <img className="videoImg" alt="" src={thumbNailUrl} />
-      <img className="buttonOverlay" alt="" src={img_overlay} />
+      <img className="videoImg"      alt="" src={thumbNailUrl} />
+      <img className="buttonOverlay" alt="" src={img_overlay}  />
     </div>
   )
 }

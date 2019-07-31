@@ -11,6 +11,16 @@
   background-color: rgba(100,100,100,1);
 }
 
+.thumbsDisplay {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbsDisplay > .videoButton {
+  margin: .4rem;
+}
+
 .visible {
   display: block;
   opacity: 100;

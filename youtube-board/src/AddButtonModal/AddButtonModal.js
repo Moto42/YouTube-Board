@@ -36,7 +36,7 @@ class AddButtonModal extends Component {
     return(
       <div className={className} >
       <VIDInput output={this.setVID} value={this.state.vid} />
-      <div>
+      <div className="thumbsDisplay">
         <ThumbnailButton vid={this.state.vid} thumbnum={1} onClick={ this.createButton } />
         <ThumbnailButton vid={this.state.vid} thumbnum={2} onClick={ this.createButton } />
         <ThumbnailButton vid={this.state.vid} thumbnum={3} onClick={ this.createButton } />
