@@ -26,6 +26,7 @@ class AddButtonModal extends Component {
       thumbnail : n
     }
     addButton(button);
+    this.setState({vid: ''});
     this.props.hideAddbuttonModal();
   }
 
