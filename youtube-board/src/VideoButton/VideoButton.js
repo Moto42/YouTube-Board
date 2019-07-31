@@ -37,6 +37,7 @@ class VideoButton extends Component {
         <div className="videoButton">
           <img className="videoImg"
             src={this.state.thumbNailUrl}
+            alt="Vide Thumbnail"
           />
           <img className="buttonOverlay"
             src={overlayIMG}
