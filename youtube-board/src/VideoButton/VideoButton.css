@@ -1,0 +1,36 @@
+.vbuttonContainer{
+  width: 126px;
+  transition: width .5s;
+  position: relative;
+  margin: .25rem;
+}
+
+.removeButton{
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.videoButton {
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  border-style: solid;
+  width: 126px;
+  max-width: 100%;
+}
+.videoButton > img {
+  max-width: 100%;
+}
+
+@media (max-width: 425px) {
+  .vbuttonContainer {
+    margin: 0rem;
+    width: 100px;
+  }
+  .videoButton {
+    width: 100px;
+    max-width: 100%;
+  }
+}
