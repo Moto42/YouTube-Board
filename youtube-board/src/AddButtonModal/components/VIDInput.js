@@ -27,9 +27,9 @@ function _handlechange(event,callback){
 
 function VIDInput(props){
   const output = typeof props.output === "function" ? props.output : e => {return};
-  return (
-    <input type='text' value={props.value} onChange={event =>{_handlechange(event,output)}} />
-  )
+  return (<div className="backBlack">
+    Enter Video ID or YouTube URL: <input type='text' value={props.value} onChange={event =>{_handlechange(event,output)}} />
+  </div>)
 };
 
 export default VIDInput;
