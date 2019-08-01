@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Button from '../Button';
 import './VideoButton.css';
+import overlayIMG from './overlay.png';
 
 //Youtube thumnail API endpoint
 // https://img.youtube.com/vi/<insert-youtube-video-id-here>/#.jpg
@@ -33,7 +34,17 @@ class VideoButton extends Component {
         <Button className="removeButton" action={this.removeButton}>
           &#x2718;
         </Button>
-        <img className="videoButton" src={this.state.thumbNailUrl} onClick={this.playVideo} alt="Play Video" />
+        <div className="videoButton">
+          <img className="videoImg"
+            src={this.state.thumbNailUrl}
+            alt="Video Thumbnail"
+          />
+          <img className="buttonOverlay"
+            src={overlayIMG}
+            onClick={this.playVideo}
+            alt="Play Video"
+          />
+        </div>
       </div>
     )
   }
